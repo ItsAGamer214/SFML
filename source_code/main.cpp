@@ -1,10 +1,16 @@
 #include <SFML/Graphics.hpp>
+#include "solver.h"
 
 int main()
 {
-    sf::RenderWindow window(sf::VideoMode(200, 200), "SFML works!");
-    sf::CircleShape shape(100.f);
-    shape.setFillColor(sf::Color::Blue);
+    sf::RenderWindow window(sf::VideoMode(1000, 1000), "SFML works!");
+    sf::CircleShape shape(500.f);
+
+    sf::Color thing(0,199,24,200);
+
+    window.sf::RenderTarget::clear(thing);
+
+    shape.setFillColor(sf::Color::White);
 
     while (window.isOpen())
     {
